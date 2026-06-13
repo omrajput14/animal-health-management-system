@@ -20,8 +20,8 @@ function BottomNav() {
                 <span className="nav-label">Scanner</span>
             </NavLink>
             <NavLink to="/alerts" className="nav-item">
-                <span className="nav-icon">🚨</span>
-                <span className="nav-label">{t('nav.alerts')}</span>
+                <span className="nav-icon">🗺️</span>
+                <span className="nav-label">Map</span>
             </NavLink>
             <NavLink to="/profile" className="nav-item">
                 <span className="nav-icon">👤</span>

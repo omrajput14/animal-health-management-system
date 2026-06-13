@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import { Toaster } from 'react-hot-toast';
+import 'leaflet/dist/leaflet.css';
 import App from './App';
 import store from './store/store';
 import i18n from './i18n/i18n';
