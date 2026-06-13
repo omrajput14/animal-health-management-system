@@ -16,6 +16,21 @@ function ScannerPage() {
     const { user } = useSelector(state => state.auth);
     const { currentFarm } = useSelector(state => state.farm);
 
+    const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+    useEffect(() => {
+        const handleOnline = () => setIsOnline(true);
+        const handleOffline = () => setIsOnline(false);
+
+        window.addEventListener('online', handleOnline);
+        window.addEventListener('offline', handleOffline);
+
+        return () => {
+            window.removeEventListener('online', handleOnline);
+            window.removeEventListener('offline', handleOffline);
+        };
+    }, []);
+
     useEffect(() => {
         if (user && !currentFarm) {
             dispatch(fetchFarms());
@@ -154,7 +169,19 @@ function ScannerPage() {
                     {!result && !isScanning && (
                         <div className="action-buttons">
                             <button onClick={handleReset} className="btn btn-secondary">Retake</button>
-                            <button onClick={handleScan} className="btn btn-primary">Start Scan</button>
+                            <button 
+                                onClick={handleScan} 
+                                className={`btn btn-primary ${!isOnline ? 'disabled' : ''}`}
+                                disabled={!isOnline}
+                            >
+                                {isOnline ? 'Start Scan' : 'Offline Mode'}
+                            </button>
+                        </div>
+                    )}
+                    
+                    {!isOnline && (
+                        <div style={{ marginTop: '15px', padding: '12px', background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '8px', color: '#b91c1c', textAlign: 'center', fontWeight: 'bold' }}>
+                            ⚠️ Network Offline. Reconnect to internet to use the AI Scanner.
                         </div>
                     )}
 
