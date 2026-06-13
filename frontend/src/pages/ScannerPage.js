@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+// Removed unused useTranslation import
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFarms } from '../store/farmSlice';
 import toast from 'react-hot-toast';
