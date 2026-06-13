@@ -12,7 +12,7 @@ function RiskAssessmentPage() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { currentFarm } = useSelector((state) => state.farm);
-    const { currentAssessment, responses, loading } = useSelector((state) => state.assessment);
+    const { currentAssessment, responses } = useSelector((state) => state.assessment);
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showResults, setShowResults] = useState(false);

@@ -11,7 +11,7 @@ import './ScannerPage.css';
 const API_URL = process.env.REACT_APP_API_URL;
 
 function ScannerPage() {
-    const { t } = useTranslation();
+    // Removed unused useTranslation destructuring
     const dispatch = useDispatch();
     const { user } = useSelector(state => state.auth);
     const { currentFarm } = useSelector(state => state.farm);

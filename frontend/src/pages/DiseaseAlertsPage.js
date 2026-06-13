@@ -55,7 +55,7 @@ const warningIcon = new L.Icon({
 });
 
 function DiseaseAlertsPage() {
-    const { t } = useTranslation();
+    // Removed unused useTranslation destructuring
     const { currentFarm } = useSelector((state) => state.farm);
     const [isOutbreakActive, setIsOutbreakActive] = useState(false);
     const [dispatchLogs, setDispatchLogs] = useState([]);
