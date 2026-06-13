@@ -8,6 +8,7 @@
         "axios": "^1.5.1",
         "chart.js": "^4.4.0",
         "formik": "^2.4.5",
+        "html2pdf.js": "^0.14.0",
         "i18next": "^23.5.1",
         "leaflet": "^1.9.4",
         "localforage": "^1.10.0",
