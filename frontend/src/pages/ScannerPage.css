@@ -212,6 +212,7 @@
 
 .pdf-section {
     margin-bottom: 30px;
+    page-break-inside: avoid;
 }
 
 .pdf-section h3 {
@@ -311,6 +312,7 @@
 
 .pdf-text-box {
     margin-bottom: 20px;
+    page-break-inside: avoid;
 }
 
 .pdf-text-box h4 {

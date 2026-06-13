@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFarms } from '../store/farmSlice';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import html2pdf from 'html2pdf.js';
@@ -11,8 +12,15 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 function ScannerPage() {
     const { t } = useTranslation();
+    const dispatch = useDispatch();
     const { user } = useSelector(state => state.auth);
     const { currentFarm } = useSelector(state => state.farm);
+
+    useEffect(() => {
+        if (user && !currentFarm) {
+            dispatch(fetchFarms());
+        }
+    }, [user, currentFarm, dispatch]);
     
     const [imageSrc, setImageSrc] = useState(null);
     const [file, setFile] = useState(null);
@@ -181,11 +189,12 @@ function ScannerPage() {
                                 </div>
                             </div>
 
-                            <div className="result-actions mt-4" style={{display: 'flex', flexDirection: 'column', gap: '12px'}}>
-                                <button onClick={generatePDF} className="btn btn-success" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', width: '100%', padding: '14px', background: '#10b981', color: 'white', fontWeight: 'bold', fontSize: '1rem', border: 'none', borderRadius: '8px', cursor: 'pointer', boxShadow: '0 4px 6px rgba(16, 185, 129, 0.2)'}} disabled={isGeneratingPDF}>
-                                    <FileText size={20} /> {isGeneratingPDF ? 'Generating PDF...' : 'Download Official Vet Report (PDF)'}
+                            <div className="action-buttons mt-4">
+                                <button onClick={generatePDF} className="btn btn-primary" disabled={isGeneratingPDF}>
+                                    <FileText size={18} style={{ verticalAlign: 'middle', marginRight: '8px', marginBottom: '2px' }} /> 
+                                    {isGeneratingPDF ? 'Generating...' : 'Download PDF'}
                                 </button>
-                                <button onClick={handleReset} className="btn btn-outline-primary" style={{width: '100%', padding: '12px', background: 'transparent', border: '2px solid var(--primary)', color: 'var(--primary)', fontWeight: 'bold', borderRadius: '8px', cursor: 'pointer'}}>
+                                <button onClick={handleReset} className="btn btn-secondary">
                                     Scan Another Image
                                 </button>
                             </div>
