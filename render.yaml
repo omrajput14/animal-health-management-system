@@ -1,0 +1,32 @@
+services:
+  # Node.js Backend Service
+  - type: web
+    name: agritech-backend
+    env: node
+    region: singapore
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: CORS_ORIGIN
+        value: '*' # Allows all origins for easy testing
+      - key: MONGODB_URI
+        sync: false # User will enter this in the Render dashboard
+      - key: JWT_SECRET
+        sync: false # User will enter this in the Render dashboard
+
+  # Python FastAPI AI Microservice
+  - type: web
+    name: agritech-ml-service
+    env: python
+    region: singapore
+    rootDir: ml-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false # User will enter this in the Render dashboard
