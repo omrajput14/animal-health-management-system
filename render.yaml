@@ -1,8 +1,8 @@
 services:
-  # Node.js Backend Service
   - type: web
     name: agritech-backend
     env: node
+    plan: free
     region: singapore
     rootDir: backend
     buildCommand: npm install
@@ -19,10 +19,10 @@ services:
       - key: JWT_SECRET
         sync: false # User will enter this in the Render dashboard
 
-  # Python FastAPI AI Microservice
   - type: web
     name: agritech-ml-service
     env: python
+    plan: free
     region: singapore
     rootDir: ml-service
     buildCommand: pip install -r requirements.txt
