@@ -423,7 +423,7 @@ REACT_APP_API_URL=http://localhost:5001/api/v1
 
 **Om Rajput**
 
-_Full-Stack Developer · AI Enthusiast · Building for Real-World Impact_
+_Data Science Student · AgriTech Builder_
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-omrajputt369.github.io-000000?style=for-the-badge&logo=github&logoColor=white)](https://omrajputt369.github.io)
 [![GitHub](https://img.shields.io/badge/GitHub-omrajput14-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/omrajput14)
