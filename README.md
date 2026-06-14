@@ -164,6 +164,52 @@ JWT-based authentication, bcrypt password hashing, role-based access control, CO
 
 ## 🏗️ Architecture & Tech Stack
 
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        FRONTEND                             │
+│              React 18 + Redux Toolkit + PWA                 │
+│                   Deployed on Vercel                        │
+│                                                             │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐   │
+│  │Dashboard │ │AI Scanner│ │ GIS Map  │ │ Compliance   │   │
+│  │(Recharts)│ │(Camera)  │ │(Leaflet) │ │ (Checklist)  │   │
+│  └──────────┘ └──────────┘ └──────────┘ └──────────────┘   │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐   │
+│  │PDF Report│ │  Risk    │ │  Auth    │ │   Profile    │   │
+│  │(html2pdf)│ │Assessment│ │(JWT+Form)│ │  (Settings)  │   │
+│  └──────────┘ └──────────┘ └──────────┘ └──────────────┘   │
+└────────────────────────┬────────────────────────────────────┘
+                         │ HTTPS (REST API)
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    BACKEND SERVER                            │
+│             Node.js + Express + Mongoose                     │
+│                  Deployed on Render                          │
+│                                                             │
+│  ┌────────────┐ ┌────────────┐ ┌────────────────────────┐   │
+│  │ Auth API   │ │ Farm API   │ │ Scanner Proxy Gateway  │   │
+│  │ (bcrypt)   │ │ (CRUD)     │ │ (Forwards to Python)   │   │
+│  └────────────┘ └────────────┘ └───────────┬────────────┘   │
+│  ┌────────────┐ ┌────────────┐             │               │
+│  │Compliance  │ │Risk Assess │             │               │
+│  │    API     │ │    API     │             │               │
+│  └────────────┘ └────────────┘             │               │
+└────────────────────────────────────────────┬────────────────┘
+                         │                   │
+          ┌──────────────┘                   │
+          ▼                                  ▼
+┌──────────────────┐            ┌─────────────────────────┐
+│  MongoDB Atlas   │            │   AI MICROSERVICE        │
+│  (Cloud DB)      │            │   Python FastAPI          │
+│                  │            │   Deployed on Render      │
+│  • Users         │            │                          │
+│  • Farms         │            │   Google Gemini 2.5      │
+│  • Assessments   │            │   Vision AI Analysis     │
+│  • Compliance    │            │                          │
+│  • Disease Alerts│            │   /analyze endpoint      │
+└──────────────────┘            └─────────────────────────┘
+```
+
 ### Frontend
 | Technology | Purpose |
 |-----------|---------|
