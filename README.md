@@ -25,9 +25,48 @@
 Built from scratch with a microservice architecture spanning **3 independent servers**,  
 deployed live across **2 cloud platforms**, and powered by **Google's Gemini Vision AI**.
 
+[🚀 Live Demo](https://animal-health-management-system-x9y.vercel.app) · [Screenshots](#-app-showcase) · [Features](#-what-it-does) · [Tech Stack](#-architecture--tech-stack) · [Getting Started](#-local-development-setup)
+
+</div>
+
 ---
 
-[🚀 Live Demo](https://animal-health-management-system-x9y.vercel.app) · [Features](#-what-it-does) · [Tech Stack](#-architecture--tech-stack) · [Getting Started](#-local-development-setup)
+## 📸 App Showcase
+
+<div align="center">
+
+### 🔐 Login & Authentication
+<img src="screenshots/login.png" alt="Login Page" width="800" />
+
+<br /><br />
+
+### 📊 Analytics Dashboard
+<img src="screenshots/dashboard.png" alt="Dashboard with Charts" width="800" />
+
+<br /><br />
+
+### 🧠 AI Disease Scanner
+<img src="screenshots/ai-scanner.png" alt="AI Scanner Page" width="800" />
+
+<br /><br />
+
+### 🗺️ GIS Map & Outbreak Simulation
+<img src="screenshots/gis-map.png" alt="GIS Map with Quarantine Zone" width="800" />
+
+<br /><br />
+
+### 📝 Risk Assessment Results
+<img src="screenshots/risk-assessment.png" alt="Risk Assessment" width="800" />
+
+<br /><br />
+
+### 👤 Farm Profile
+<img src="screenshots/profile.png" alt="Profile Page" width="800" />
+
+<br /><br />
+
+### 📄 Sample AI-Generated Veterinary Report
+> 🔗 [Download Sample Vet Report (PDF)](screenshots/sample-vet-report.pdf)
 
 </div>
 

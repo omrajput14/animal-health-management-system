@@ -45,3 +45,4 @@ __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+screenshots/.DS_Store
