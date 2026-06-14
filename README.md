@@ -27,7 +27,7 @@ deployed live across **2 cloud platforms**, and powered by **Google's Gemini Vis
 
 ---
 
-[Live Demo](#-live-deployment) · [Features](#-what-it-does) · [Tech Stack](#-architecture--tech-stack) · [Getting Started](#-local-development-setup)
+[🚀 Live Demo](https://animal-health-management-system-x9y.vercel.app) · [Features](#-what-it-does) · [Tech Stack](#-architecture--tech-stack) · [Getting Started](#-local-development-setup)
 
 </div>
 
@@ -259,7 +259,7 @@ The entire system is deployed across **two cloud platforms** using a microservic
 
 | Service | Platform | URL |
 |---------|----------|-----|
-| 🖥️ **Frontend** | Vercel | `animal-health-management-system.vercel.app` |
+| 🖥️ **Frontend** | Vercel | [animal-health-management-system-x9y.vercel.app](https://animal-health-management-system-x9y.vercel.app) |
 | ⚙️ **Backend API** | Render | `agritech-backend.onrender.com` |
 | 🧠 **AI Service** | Render | `agritech-ml-service.onrender.com` |
 | 🗃️ **Database** | MongoDB Atlas | Cloud-hosted cluster |
