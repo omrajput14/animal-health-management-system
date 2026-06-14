@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkAuth } from './store/authSlice';
 
 // Pages
-import HomePage from './pages/HomePage';
+// HomePage removed — visitors are redirected straight to login
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
@@ -37,8 +37,8 @@ function App() {
 
     return (
         <Routes>
-            {/* Public routes */}
-            <Route path="/" element={<HomePage />} />
+            {/* Root redirect — skip landing page, go straight to login or dashboard */}
+            <Route path="/" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
             <Route
                 path="/login"
                 element={isAuthenticated ? <Navigate to="/dashboard" /> : <LoginPage />}
@@ -123,7 +123,7 @@ function App() {
             />
 
             {/* Catch all */}
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
     );
 }
