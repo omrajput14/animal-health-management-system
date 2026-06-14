@@ -86,6 +86,16 @@ deployed live across **2 cloud platforms**, and powered by **Google's Gemini Vis
 
 ---
 
+## 📊 System Infographic
+
+<div align="center">
+
+<img src="screenshots/infographic.png" alt="System Architecture Infographic" width="100%" />
+
+</div>
+
+---
+
 ## 🎬 What It Does
 
 ### 🧠 1. AI Disease Scanner — _Powered by Google Gemini 2.5 Flash_
@@ -149,16 +159,6 @@ Full internationalization in **English**, **Hindi (हिन्दी)**, and **
 ### 🔐 9. Authentication & Security
 
 JWT-based authentication, bcrypt password hashing, role-based access control, CORS-configured backend, and middleware-protected routes on both frontend and backend.
-
----
-
-## 📊 System Infographic
-
-<div align="center">
-
-<img src="screenshots/infographic.png" alt="System Architecture Infographic" width="100%" />
-
-</div>
 
 ---
 
