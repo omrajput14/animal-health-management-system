@@ -35,6 +35,26 @@ deployed live across **2 cloud platforms**, and powered by **Google's Gemini Vis
 
 ---
 
+## 🧬 The Problem
+
+> In rural India, **60% of livestock diseases go undiagnosed** until it's too late.  
+> Farmers lack access to veterinary experts. By the time they travel to a clinic, diseases have already spread to neighboring farms.  
+> There is no centralized system to track outbreaks, issue quarantine alerts, or generate legally valid health certificates on-the-fly.
+
+**This project solves all three.**
+
+---
+
+## 📊 System Infographic
+
+<div align="center">
+
+<img src="screenshots/infographic.png" alt="System Architecture Infographic" width="100%" />
+
+</div>
+
+---
+
 ## 📸 App Showcase
 
 <div align="center">
@@ -71,26 +91,6 @@ deployed live across **2 cloud platforms**, and powered by **Google's Gemini Vis
 
 ### 📄 Sample AI-Generated Veterinary Report
 > 🔗 [Download Sample Vet Report (PDF)](screenshots/sample-vet-report.pdf)
-
-</div>
-
----
-
-## 🧬 The Problem
-
-> In rural India, **60% of livestock diseases go undiagnosed** until it's too late.  
-> Farmers lack access to veterinary experts. By the time they travel to a clinic, diseases have already spread to neighboring farms.  
-> There is no centralized system to track outbreaks, issue quarantine alerts, or generate legally valid health certificates on-the-fly.
-
-**This project solves all three.**
-
----
-
-## 📊 System Infographic
-
-<div align="center">
-
-<img src="screenshots/infographic.png" alt="System Architecture Infographic" width="100%" />
 
 </div>
 
